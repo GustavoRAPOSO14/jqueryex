@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            position: absolute;
+            background-color: #abc;
+            left: 0px;
+            top: 30px;
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+        }   
+    </style>
+    <script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>
+
+</head>
+<body>
+    <button id="Direita">Direita</button>
+    <button id="Pare">PARE!</button>
+    <button id="Esquerda">Esquerda</button>
+    <div class="quadrado"></div>
+
+    <script>
+        $("#Direita").click(function(){
+            $(".quadrado").animate({ left: "+=300px"}, 2000)
+        })
+        $("#Esquerda").click(function(){
+            $(".quadrado").animate({ left: "-=300px"}, 2000)
+        })
+        $("#Pare").click(function(){
+            $(".quadrado").stop()
+        })
+
+    </script>
+</body>
+</html>
